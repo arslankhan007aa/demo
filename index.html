@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title>My First Web Page</title>
+  </head>
+  <body>
+    <h1>Assalam o Alaikum!</h1>
+    <p>I am Arslan Khan</p>
+  </body>
+</html>
+selector {
+  property: value;
+}
+<html>
+  <head>
+    <title>My Web Page</title>
+    <style>
+      h1 {
+        color: blue;
+        font-size: 30px;
+      }
+      p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+      #header {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header">Welcome</h1>
+    <p class="highlight">I will Make My First Web.</p>
+    <p>This is for Try!.</p>
+  </body>
+</html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 300px;
+        margin: 10px;
+        background: lightblue;
+      }
+      @media (max-width: 600px) {
+        .box {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Arslan</div>
+      <div class="box">Technical</div>
+    </div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        animation: move 5s infinite;
+      }
+      @keyframes move {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(200px); }
+        100% { transform: translateX(0); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        animation: move 5s infinite;
+      }
+      @keyframes move {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(200px); }
+        100% { transform: translateX(0); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        animation: ArslanTechnical 2s 1;
+      }
+      @keyframes ArslanTechnical {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(200px); background: blue; }
+        100% { transform: translateX(0); background: green; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
+<html>
+  <head>
+    <script>
+      function changeText() {
+        document.getElementById("demo").innerHTML = "Contact Me On WhatsApp!";
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="demo">Click button</h1>
+    <button onclick="changeText()">Click me</buttonhttps://wa.me/9203704624316>
+  </body>
+</html>
+<html>
+  <head>
+    <script>
+      function changeStyle() {
+        let box = document.getElementById("box");
+        box.style.background = "blue";
+        box.innerHTML = "Changed!";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="box" style="width:100px;height:100px;background:red;">Click me</div>
+    <button onclick="changeStyle()">Change</button>
+  </body>
+</html>
+<html>
+  <head>
+    <script>
+      function showMessage() {
+        alert("Button clicked!");
+      }
+      function changeColor() {
+        document.getElementById("text").style.color = "red";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="showMessage()">Click me</button>
+    <p id="text" onmouseover="changeColor()">changeStyle</p>
+  </body>
+</html>
+<html>
+  <head>
+    <script>
+      let tasks = [];
+      function addTask() {
+        let task = document.getElementById("task").value;
+        tasks.push(task);
+        showTasks();
+      }
+      function showTasks() {
+        let list = "";
+        tasks.forEach((task, i) => {
+          list += `<li>${task} <button onclick="done(${i})">Done</button></li>`;
+        });
+        document.getElementById("list").innerHTML = list;
+      }
+      function done(i) {
+        tasks.splice(i, 1);
+        showTasks();
+      }
+    </script>
+  </head>
+  <body>
+    <input id="task" type="text">
+    <button onclick="addTask()">Add</button>
+    <ul id="list"></ul>
+  </body>
+</html>
+
